@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Secure Online Banking</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+    --primary: #0b3c5d;
+    --accent: #1d84b5;
+    --bg: #f4f6f8;
+    --text: #333;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-container {
+    width: 100%;
+    max-width: 380px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.bank-header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    padding: 25px;
+    color: white;
+    text-align: center;
+}
+
+.bank-header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.bank-header p {
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.bank-body {
+    padding: 30px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: var(--text);
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: var(--primary);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--accent);
+}
+
+.security-note {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 10px;
+    font-size: 11px;
+    text-align: center;
+    color: #999;
+}
+</style>
+</head>
+
+<body>
+<div class="bank-container">
+    <div class="bank-header">
+        <h1>Example National Bank</h1>
+        <p>Secure Online Banking</p>
+    </div>
+
+    <div class="bank-body">
+        <form method="POST">
+            <label for="username">User ID</label>
+            <input id="username" name="username" type="text" placeholder="Enter your User ID" required>
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Enter your password" required>
+
+            <button type="submit">Sign In</button>
+        </form>
+
+        <div class="security-note">
+            🔒 Your session is protected using industry-standard security.
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2025 Example National Bank. All rights reserved.
+    </div>
+</div>
+</body>
+</html>
